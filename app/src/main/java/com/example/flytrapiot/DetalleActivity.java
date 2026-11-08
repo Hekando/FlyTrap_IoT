@@ -55,6 +55,12 @@ public class DetalleActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        cargarTrampa(id_actual);
+    }
+
     public void cargarTrampa(int id) {
 
         TrampasSQLOpenHelper admin = new TrampasSQLOpenHelper(this);
